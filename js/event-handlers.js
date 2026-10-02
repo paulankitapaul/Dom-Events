@@ -12,3 +12,10 @@
             userInfoEl.innerText = 'Login Successfully'
         })
         // 3rd way
+        document.getElementById('update-btn').addEventListener('click',function(){
+        const nameInput = document.getElementById('name-input');
+        const name = nameInput.value;
+        console.log(name);
+        const nameP = document.getElementById('name');
+        nameP.innerText =name;
+       })

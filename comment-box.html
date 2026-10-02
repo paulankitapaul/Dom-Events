@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment-Box</title>
+    <style>
+        .comment-box{
+            border: 2px solid chocolate;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Awesome Comment box. Write what is in your mind!</h1>
+    <section>
+        <h3>All comments are here</h3>
+        <div id="commentContainer">
+            <p class="comment-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat amet optio, atque
+            inventore animi a esse perferendis maxime, natus obcaecati asperiores minima doloribus rem labore voluptatem
+            quisquam ipsam dolore repudiandae?</p>
+        <p class="comment-box">Magnam, magni temporibus! Blanditiis non numquam expedita minima excepturi aliquid
+            ducimus assumenda tempora eos reprehenderit voluptate voluptatem repudiandae saepe porro autem, sit quo
+            corporis impedit, perspiciatis exercitationem et! Vel, aliquam.</p>
+        <p class="comment-box">Quisquam eum porro nisi odio ducimus eius tempora aliquam incidunt alias explicabo
+            blanditiis iure non labore eaque veniam fuga enim nam, dolor iste reiciendis praesentium quaerat. Laudantium
+            tempora eius vero.</p>
+        </div>
+            <textarea name="" id="comment-area" cols="60" rows="5"></textarea>
+            <br>
+            <button id="btn-post-comment">Post Comment</button>
+    </section>
+    <script>
+document.getElementById('btn-post-comment').addEventListener('click',function(){
+   const areaComment = document.getElementById('comment-area');
+   const commentValue = areaComment.value;
+   const containerComment = document.getElementById('commentContainer')
+   const p = document.createElement('p')
+   p.innerText = commentValue;
+   p.classList.add('comment-box')
+   containerComment.appendChild(p);
+   areaComment.value='';
+   
+})
+    </script>
+</body>
+
+</html>
