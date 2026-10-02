@@ -21,9 +21,12 @@
     <button id="btn">Make Blue</button>
     <br>
     <button id="make-btn-purple">Make Purple</button>
+    <button id="make-golden">Make Golden</button>
     <input type="text">
     <script>
-        
+        document.getElementById('make-golden').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'goldenrod';
+        })
     </script>
     <script src="./js/events.js"></script>
 </body>
